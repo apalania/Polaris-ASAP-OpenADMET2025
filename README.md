@@ -14,11 +14,11 @@ Potency modeling was considered against the SAR-Cov2 and MERS-CoV main protease 
 
 Our original contribution to the challenge can be found [here](https://github.com/apalania/Polaris_ASAP-Challenge-2025) and a corresponding discussion [here](https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-1tb2m).
 
-Ms. Mounika Srilakshmi, Ms. Ida Titus, Dr. Ashok Palaniappan. Experiments with data-augmented modeling of ADME and potency endpoints in the ASAP-Polaris-OpenADMET Antiviral Challenge. ChemRxiv. 09 September 2025. DOI: https://doi.org/10.26434/chemrxiv-2025-1tb2m
+Ms. Mounika Srilakshmi*, Ms. Ida Titus*, Dr. Ashok Palaniappan. Experiments with data-augmented modeling of ADME and potency endpoints in the ASAP-Polaris-OpenADMET Antiviral Challenge. ChemRxiv. 09 September 2025. DOI: https://doi.org/10.26434/chemrxiv-2025-1tb2m
 
 Models themselves (for inference) could be found on huggingface.
 
 ## Team SystemsCBLab members:
-1. Ida Priyadarshini T [PhD candidate]
+1. Ida Priyadarshini T [doctoral candidate]
 2. Mounika Srilakskmi Mallepulla [UG student]
 3. Ashok Palaniappan, Ph.D (PI)
