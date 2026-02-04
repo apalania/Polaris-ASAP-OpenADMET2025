@@ -10,7 +10,7 @@ Scripts for training Gradual partial (progressive) fine-tuning models of the bas
 
 4. **_AttFPGNN-transformer_Polaris-only_T-stratified_random.py_; _ATTFPGNN-transformer_Polaris-only_T-stratified_scaffold.py_**:
 
-Script for training _de novo_ AttentiveFingerPrint GNN-transformer architectures for learning the molecule potency against SARS and MERS _M^Pro_ targets. Options to include docking scores in the final model are provided in the script. Both splits are shown - Random & Scaffold.
+Script for training _de novo_ AttentiveFingerPrint GNN-transformer architectures for learning joint protein-ligand representations of ligand potency against SARS-CoV2 and MERS-CoV _M^{Pro}_ targets. The domain=specific models are trained from scratch, using target-stratified random or scaffold splits (both scripts provided).
 
 6. **_Ensembles_Early-Late-Stacking_random.py_; _Ensembles_Early-Late-Stacking_scaffold.py_**:
 
