@@ -14,5 +14,7 @@ For each instance the SMILES string and the respective endpoint value are provid
 
 ### Potency Dataset:
 
-The fine-tuning dataset and the domain-specific dataset for training from scratch were both just the CHallenge datasets including SARS and MERS. The dataset is reproduced here for the sake of completeness (polaris-potency_train.tsv)
+The fine-tuning dataset and the domain-specific dataset for training from scratch were just the Challenge datasets including SARS and MERS. The dataset is reproduced here for the sake of completeness (polaris-potency_train.tsv)
+
+In addition, a dataset of 30,220 protein-ligand pairs curated from ChEMBL by searching for ligands with IC50 values and retrieving sequences of the corresponding target proteins from UniProt, is also shared. This dataset was compiled using the scripts provided in Supplementary File S4 (with our manuscript) and is used for pre-training a protein-ligand AttFPGNN-transformer baseline model. (Potency-ChEMBL-UniProt_Protein-Ligand_Dataset.csv)
 
