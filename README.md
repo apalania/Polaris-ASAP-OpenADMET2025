@@ -16,7 +16,7 @@ Our original contribution to the challenge can be found [here](https://github.co
 
 Ms. Mounika Srilakshmi*, Ms. Ida Titus*, Dr. Ashok Palaniappan. Experiments with data-augmented modeling of ADME and potency endpoints in the ASAP-Polaris-OpenADMET Antiviral Challenge. ChemRxiv. 09 September 2025. DOI: https://doi.org/10.26434/chemrxiv-2025-1tb2m
 
-Models themselves (for inference) could be found on huggingface.
+Models themselves (for inference) could be found on [huggingface](https://huggingface.co/apalania/Polaris-ASAP-OpenADMET2025).
 
 ## Team SystemsCBLab members:
 1. Ida Priyadarshini T [doctoral candidate]
