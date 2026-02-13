@@ -24,7 +24,7 @@
 | vocab_enhanced_features.pkl | N/A | Vocabulary for tokenization |
 | tokenizer_enhanced_features.pkl | N/A | Tokenizer object |
 | polaris_train.csv | ligand_smiles OR SMILES OR canonical_smiles, protein_sequence OR PROTEIN_SEQ, pIC50 OR logIC50 OR IC50 | Training data |
-| polaris_unblinded_test.csv | Same as training data | Test data |
+| polaris_unblinded_test.csv | ligand_smiles OR SMILES OR canonical_smiles, protein_sequence OR PROTEIN_SEQ, pIC50 OR logIC50 OR IC50 | Test data |
 
 ### Outputs
 
@@ -56,12 +56,12 @@
 
 ### Inputs 
 
-| File Name | Required Columns | Description |
+| File Name | Columns | Description |
 |-----------|------------------|-------------|
 | train.csv | SMILES OR canonical_smiles OR ligand_smiles, PROTEIN_SEQ OR PROTEIN OR TARGET OR protein_sequence, IC50 OR logIC50 OR pIC50 | Training data pool |
 | test.csv | Same as train.csv | External test set |
-| train_docking_scores.csv (optional) | Docking scores | Docking scores for training data |
-| test_docking_scores.csv (optional) | Docking scores | Docking scores for test data |
+| train_docking_scores.csv  | Docking scores (optional)| Docking scores for training data |
+| test_docking_scores.csv  | Docking scores (optional) | Docking scores for test data |
 | descriptors_55.txt | N/A | List of 55 molecular descriptor names (one per line) |
 | descriptors_25.txt | N/A | List of 25 molecular descriptor names (one per line) |
 | enhanced_scaffold_split_indices.json | N/A | Pre-computed train/val split indices |
