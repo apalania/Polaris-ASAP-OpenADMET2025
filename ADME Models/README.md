@@ -21,4 +21,4 @@ Endpoint training scripts:
 The ensemble strategy is common to all endpoints and a unified script was used for this purpose [Ensemble_final.py].
 Please refer to our manuscript for details.
 
-Please consult the (Usage_notes.md)[https://github.com/apalania/Polaris-ASAP-OpenADMET2025/blob/main/ADME%20Models/Usage_notes.md] for using the scripts.
+Please consult the [Usage_notes.md](https://github.com/apalania/Polaris-ASAP-OpenADMET2025/blob/main/ADME%20Models/Usage_notes.md) for using the scripts.
