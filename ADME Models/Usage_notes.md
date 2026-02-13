@@ -29,6 +29,6 @@ Similarly, create the {endpoint}_files in the path of the scripts.
 
   - Individual split predictions (10 files):
 
-    o predictions_{config_name}\_split_{0-9}\_blind_test.csv
+    - predictions_{config_name}\_split_{0-9}\_blind_test.csv
 
-    o Columns: SMILES, Predicted_{TARGET_COLUMN}\_split_{i}
+    - Columns: SMILES, Predicted_{TARGET_COLUMN}\_split_{i}
