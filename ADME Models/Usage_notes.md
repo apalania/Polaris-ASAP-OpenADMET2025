@@ -21,13 +21,13 @@ Similarly, create the {endpoint}_files in the path of the scripts.
 
 - Model Files (10 per experiment):
   
-  ● model_{config_name}_split_{0-9}.pth
+  - model_{config_name}\_split_{0-9}.pth
 
-  ● Serialized XGBoost models (one per split)
+  - Serialized XGBoost models (one per split)
 
 - Prediction Files (per experiment):
 
-  ● Individual split predictions (10 files):
+  - Individual split predictions (10 files):
 
     o predictions_{config_name}\_split_{0-9}\_blind_test.csv
 
