@@ -1,12 +1,22 @@
-## Inputs 
+## BaseModel: AttFPGNN-Transformer on ChEMBL+UniProt
 
-### BaseModel: AttFPGNN-Transformer on ChEMBL+UniProt
+### Inputs 
 
 | File Name | Required Columns | Description |
 |-----------|------------------|-------------|
 | protein_ligand.csv | protein_sequence, canonical_smiles, IC50 | ChEMBL data with protein sequences, ligand SMILES, and binding affinity values |
 
-### GPFT: Progressive Fine-tuning models (Random & Scaffold split)
+### Outputs
+
+| File Name | Description |
+|-----------|-------------|
+| potency_enhanced_features_best_model.pt | Saved model checkpoint |
+| vocab_enhanced_features.pkl | Vocabulary mapping for protein sequences |
+| tokenizer_enhanced_features.pkl | Tokenizer for processing protein sequences |
+
+## GPFT: Progressive Fine-tuning models (Random & Scaffold split)
+
+### Inputs 
 
 | File Name | Required Columns | Description |
 |-----------|------------------|-------------|
@@ -16,7 +26,16 @@
 | polaris_train.csv | ligand_smiles OR SMILES OR canonical_smiles, protein_sequence OR PROTEIN_SEQ, pIC50 OR logIC50 OR IC50 | Training data |
 | polaris_unblinded_test.csv | Same as training data | Test data |
 
-### Domain-specific AttFPGNN-Transformer training from scratch (Random & Scaffold split)
+### Outputs
+
+| File Name | Columns | Description |
+|-----------|---------|-------------|
+| target_specific_random_p1-20_tuned_predictions.csv | Actual values, Predicted values, Residuals | Fine-tuned model predictions |
+| scaffold_split_indices.json (scaffold split only) | N/A | Split indices for use in other models |
+
+## Domain-specific AttFPGNN-Transformer training from scratch (Random & Scaffold split)
+
+### Inputs 
 
 | File Name | Required Columns | Description |
 |-----------|------------------|-------------|
@@ -24,7 +43,18 @@
 | polaris_unblinded_test.csv | Same as training (pIC50 optional) | Test data |
 | scaffold_split_indices.json (scaffold split only) | N/A | Pre-computed split indices from GPFT |
 
-### XGBoost models, with optional Docking scores in input
+### Outputs
+
+| File Name | Columns | Description |
+|-----------|---------|-------------|
+| test_predictions.csv | Actual values, Predictions, Errors | Test set predictions with metrics |
+| enhanced_Target_Random_best_model.pt | N/A | Best trained model checkpoint |
+| vocab_enhanced_Target_Random.pkl | N/A | Protein sequence vocabulary |
+| tokenizer_enhanced_Target_Random.pkl | N/A | Protein tokenizer |
+
+## XGBoost models, with optional Docking scores in input
+
+### Inputs 
 
 | File Name | Required Columns | Description |
 |-----------|------------------|-------------|
@@ -36,7 +66,17 @@
 | descriptors_25.txt | N/A | List of 25 molecular descriptor names (one per line) |
 | enhanced_scaffold_split_indices.json | N/A | Pre-computed train/val split indices |
 
-### Stacking ensemble (Domain-specific AttFPGNN-Transformer + XGB)
+### Outputs
+
+| File Name | Columns | Description |
+|-----------|---------|-------------|
+| predictions_xgb_{strategy}\_{desc}desc_{dock}_test.csv | Predictions and actual values | Test predictions for each configuration |
+| xgb_{strategy}\_{desc}desc_{dock}.json | N/A | XGBoost model (JSON format) |
+| scaler_xgb_{strategy}\_{desc}desc_{dock}.pkl | N/A | StandardScaler for features |
+
+## Stacking ensemble (Domain-specific AttFPGNN-Transformer + XGB)
+
+### Inputs 
 
 | File Name | Location | Required Columns | Description |
 |-----------|----------|------------------|-------------|
@@ -49,43 +89,10 @@
 | enhanced_Target_Random_best_model.pt | Enhanced_GNN_Random/ | N/A | Trained GNN model |
 | polaris_train.csv | Current directory | SMILES OR canonical_smiles OR ligand_smiles,
 
-## Outputs
-
-### BaseModel: AttFPGNN-Transformer on ChEMBL+UniProt
-
-| File Name | Description |
-|-----------|-------------|
-| potency_enhanced_features_best_model.pt | Saved model checkpoint |
-| vocab_enhanced_features.pkl | Vocabulary mapping for protein sequences |
-| tokenizer_enhanced_features.pkl | Tokenizer for processing protein sequences |
-
-### GPFT: Progressive Fine-tuning models (Random & Scaffold split)
-
-| File Name | Columns | Description |
-|-----------|---------|-------------|
-| target_specific_random_p1-20_tuned_predictions.csv | Actual values, Predicted values, Residuals | Fine-tuned model predictions |
-| scaffold_split_indices.json (scaffold split only) | N/A | Split indices for use in other models |
-
-### Domain-specific AttFPGNN-Transformer training from scratch (Random & Scaffold split)
-
-| File Name | Columns | Description |
-|-----------|---------|-------------|
-| test_predictions.csv | Actual values, Predictions, Errors | Test set predictions with metrics |
-| enhanced_Target_Random_best_model.pt | N/A | Best trained model checkpoint |
-| vocab_enhanced_Target_Random.pkl | N/A | Protein sequence vocabulary |
-| tokenizer_enhanced_Target_Random.pkl | N/A | Protein tokenizer |
-
-### XGBoost models, with optional Docking scores in input
-
-| File Name | Columns | Description |
-|-----------|---------|-------------|
-| predictions_xgb_{strategy}\_{desc}desc_{dock}_test.csv | Predictions and actual values | Test predictions for each configuration |
-| xgb_{strategy}\_{desc}desc_{dock}.json | N/A | XGBoost model (JSON format) |
-| scaler_xgb_{strategy}\_{desc}desc_{dock}.pkl | N/A | StandardScaler for features |
-
-### Stacking ensemble (Domain-specific AttFPGNN-Transformer + XGB)
+### Outputs
 
 | File Name | Columns | Description |
 |-----------|---------|-------------|
 | final_test_predictions.csv | SMILES, protein_sequence, True values (pIC50, IC50 nM), GNN predictions, XGBoost predictions, Stacked predictions, Absolute errors | Comprehensive predictions with all model outputs |
 | stacking_ridge_model.pth | N/A | Saved stacking model |
+
