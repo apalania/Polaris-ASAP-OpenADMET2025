@@ -1,7 +1,7 @@
 # Polaris-ASAP-OpenADMET_Challenge-2025_Final
 Datasets and Code for training ADME and Potency models for the [Antiviral Drug Discovery 2025](https://polarishub.io/competitions/asap-discovery/antiviral-drug-discovery-2025) Challenge 
 
-This repository is a summary of our work on the Polaris-ASAP-OpenADMET Antiviral Challenge 2025, including post-competition analysis and enhancements. 
+This repository is a summary of our work on the Polaris-ASAP-OpenADMET Antiviral Challenge 2025, especially post-competition analysis and enhancements. [retrospective]
 It provides all the datasets we used for the Challenge, training scripts for all the five ADME problems posed in the challenge, and a codebase for various model experiments with Potency.
 The ADME endpoints considered include:
 1. LogD - lipophilicity
