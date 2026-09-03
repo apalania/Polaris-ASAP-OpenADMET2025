@@ -20,5 +20,4 @@ Models themselves (for inference) could be found on [huggingface](https://huggin
 
 ## Team SystemsCBLab members:
 1. Ida Priyadarshini T [doctoral candidate]
-2. Mounika Srilakskmi Mallepulla [UG student]
-3. Ashok Palaniappan, Ph.D (PI)
+2. Ashok Palaniappan, Ph.D (PI)
