@@ -1,4 +1,6 @@
 # Polaris-ASAP-OpenADMET_Challenge-2025_Final
+[![DOI](https://zenodo.org/badge/1139631312.svg)](https://doi.org/10.5281/zenodo.22272787)
+
 Datasets and Code for training ADME and Potency models for the [Antiviral Drug Discovery 2025](https://polarishub.io/competitions/asap-discovery/antiviral-drug-discovery-2025) Challenge 
 
 This repository is a summary of our work on the Polaris-ASAP-OpenADMET Antiviral Challenge 2025, especially post-competition analysis and enhancements. (retrospective)
