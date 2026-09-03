@@ -12,9 +12,7 @@ The ADME endpoints considered include:
 
 Potency modeling was considered against the SAR-Cov2 and MERS-CoV main protease (_M<sup>Pro</sup>_) enzyme.
 
-Our original contribution to the challenge can be found [here](https://github.com/apalania/Polaris_ASAP-Challenge-2025) and a corresponding discussion [here](https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-1tb2m).
-
-Ms. Mounika Srilakshmi*, Ms. Ida Titus*, Dr. Ashok Palaniappan. Experiments with data-augmented modeling of ADME and potency endpoints in the ASAP-Polaris-OpenADMET Antiviral Challenge. ChemRxiv. 09 September 2025. DOI: https://doi.org/10.26434/chemrxiv-2025-1tb2m
+Our original contribution to the challenge can be found [here](https://github.com/apalania/Polaris_ASAP-Challenge-2025) and a corresponding discussion [on chemrxiv](https://chemrxiv.org/doi/full/10.26434/chemrxiv-2025-1tb2m).
 
 Models themselves (for inference) could be found on [huggingface](https://huggingface.co/apalania/Polaris-ASAP-OpenADMET2025).
 
